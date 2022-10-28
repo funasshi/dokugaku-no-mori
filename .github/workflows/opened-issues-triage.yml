@@ -1,0 +1,14 @@
+name: Move new issues into dokugaku-no-mori
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  automate-project-columns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: dokugaku-no-mori
+          column: Todo
+          repo-token: ${{ secrets.GH_TOKEN }}
