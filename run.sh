@@ -1,0 +1,1 @@
+bash -c "sleep 30 && yarn global add dotenv-cli && dotenv -e .env.development yarn prisma migrate deploy && yarn dev"
